@@ -46,6 +46,6 @@ public class Raffle {
     public static void main(String[] args) {
         Raffle obj = new Raffle("ProjectFiles/src/participants.csv");
         obj.draw(5);
-        obj.showWinners();;
+        obj.showWinners();
     }
 }
