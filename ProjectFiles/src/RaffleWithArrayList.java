@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Raffle {
+public class RaffleWithArrayList {
     private final List<String> individuals = new ArrayList<>();
     private List<String> winners;
 
-    Raffle (String fileName) {
+    RaffleWithArrayList(String fileName) {
         try {
         FileReader participants = new FileReader(fileName);
         BufferedReader reader = new BufferedReader(participants);
@@ -42,7 +42,7 @@ public class Raffle {
     }
 
     public static void main(String[] args) {
-        Raffle obj = new Raffle("ProjectFiles/src/participants.csv");
+        RaffleWithArrayList obj = new RaffleWithArrayList("ProjectFiles/src/participants.csv");
         obj.draw(5);
         obj.showWinners();
     }
