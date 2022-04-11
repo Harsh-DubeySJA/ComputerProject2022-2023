@@ -13,11 +13,11 @@ public class Raffle {
             Scanner sc = new Scanner(new FileReader(fileName));
             BufferedReader br = new BufferedReader(reader);
             int length = 0;
-            while (sc.nextLine() != null)
+            while (br.readLine() != null)
                 length++;
             individuals = new String[length];
             for (int i = 0; i < length; i++) {
-                individuals[i] = br.readLine();
+                individuals[i] = sc.nextLine();
             }
         } catch (IOException e) {
             System.out.println();
@@ -45,7 +45,7 @@ public class Raffle {
 
     public static void main(String[] args) {
         Raffle obj = new Raffle("ProjectFiles/src/participants.csv");
-        obj.draw(20);
+        obj.draw(5);
         obj.showWinners();;
     }
 }
