@@ -19,6 +19,9 @@ public class Raffle {
             for (int i = 0; i < length; i++) {
                 individuals[i] = sc.nextLine();
             }
+            sc.close();
+            br.close();
+            reader.close();
         } catch (IOException e) {
             System.out.println();
         }
@@ -38,6 +41,7 @@ public class Raffle {
     }
 
     private void showWinners() {
+        System.out.println("Winners are\n");
         for (int i = 0; i < noOfWinners; i++) {
             System.out.println(individuals[i]);
         }
