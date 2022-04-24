@@ -7,8 +7,11 @@ public class Trip {
         float sum = 0;
         for (float individualMoney : expenditure)
             sum += individualMoney;
+
+//        Calculating average on float variable upto two decimal places
         average = (int)(((sum / expenditure.length) + 0.005f) * 100.0f) / 100.0f;
 
+//        Money to be exchanged to equalize students' cost
         float moneyExchange = 0;
         for (float money : expenditure)
             if (money > average)
