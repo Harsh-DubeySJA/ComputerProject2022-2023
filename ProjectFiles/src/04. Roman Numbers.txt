@@ -1,0 +1,15 @@
+Design a class Roman with to convert between roman to regular numbers and vice-versa.
+
+Class Name: Roman
+
+Instance variables:
+    value: to store number in decimal number system
+    roman: to store number in roman number system
+Methods/constructors
+    Roman(int value):   to initialize the object using a value in decimal number system.
+    Roman(String roman): to initialize the object using a value roman in roman number system.
+    getRoman(): to return the value stored in object (roman/value instance variables) in roman.
+    getDecimal(): to return the value stored in object (roman/value instance variables) in decimal.
+    toString(): to return the object in string form showing the number in both decimal and roman form.
+    
+Design a suitable main() method to test the above class.
