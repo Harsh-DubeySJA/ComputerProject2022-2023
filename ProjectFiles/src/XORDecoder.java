@@ -32,7 +32,7 @@ public class XORDecoder {
                 password += " ";
             else {
                 password += copy.charAt(j);
-                j = j+1 < copy.length() - 1 ? j+1 : 0;
+                j = j+1 < copy.length() ? j+1 : 0;
             }
 
         return password;
