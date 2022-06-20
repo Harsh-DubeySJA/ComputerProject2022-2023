@@ -76,14 +76,14 @@ class TestRoman {
         Roman roman = new Roman(sc.nextInt());
         System.out.println("Roman Number : " + roman.decimalToRoman());
 
-        // getRoman() And getDecimal() methods
+        // Roman getRoman(), getDecimal() and toString()
         System.out.println(roman.getRoman());
         System.out.println(roman.getDecimal());
+        System.out.println(roman);
+
+        // Decimal getDecimal(), getRoman() and toString()
         System.out.println(decimal.getDecimal());
         System.out.println(decimal.getRoman());
-
-        // toString()
-        System.out.println(roman);
         System.out.println(decimal);
         sc.close();
     }
