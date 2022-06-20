@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Roman {
 
     private int value;
@@ -57,5 +59,32 @@ public class Roman {
     public String toString() {
         return  "value=" + value +
                 ",\nroman=" + roman;
+    }
+}
+
+class TestRoman {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Decimal Conversion
+        System.out.print("Roman Number : ");
+        Roman decimal = new Roman(sc.next());
+        System.out.println("Decimal Number : " + decimal.romanToDecimal());
+
+        // Roman Conversion
+        System.out.print("Decimal Number : ");
+        Roman roman = new Roman(sc.nextInt());
+        System.out.println("Roman Number : " + roman.decimalToRoman());
+
+        // getRoman() And getDecimal() methods
+        System.out.println(roman.getRoman());
+        System.out.println(roman.getDecimal());
+        System.out.println(decimal.getDecimal());
+        System.out.println(decimal.getRoman());
+
+        // toString()
+        System.out.println(roman);
+        System.out.println(decimal);
+        sc.close();
     }
 }
