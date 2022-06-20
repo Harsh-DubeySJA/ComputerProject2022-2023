@@ -82,8 +82,8 @@ class TestRoman {
         System.out.println("toString() \n" + decimal);
 
         // Roman getRoman(), getDecimal() and toString()
-        System.out.println("\ngetRoman() " + roman.getRoman());
-        System.out.println("getDecimal() " + roman.getDecimal());
+        System.out.println("\ngetDecimal() " + roman.getDecimal());
+        System.out.println("getRoman() " + roman.getRoman());
         System.out.println("toString() \n" + roman);
         sc.close();
     }
