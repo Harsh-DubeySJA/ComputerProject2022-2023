@@ -29,7 +29,7 @@ public class Trip {
         for (int i = 0; i < expenditure.length; i++)
             expenditure [i] = sc.nextFloat();
 
-        System.out.println("Money to be exchanged " + output(expenditure));
+        System.out.println("Money to be exchanged $" + output(expenditure));
         sc.close();
     }
 }
