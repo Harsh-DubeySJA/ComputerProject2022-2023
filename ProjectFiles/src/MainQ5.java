@@ -1,30 +1,30 @@
 import java.util.Scanner;
 
 class SmithNumber {
-    private int n;
-    public SmithNumber(int n) {
-        this.n = n;
+    private int input;
+    public SmithNumber(int input) {
+        this.input = input;
     }
 
     public boolean isSmith() {
-        return !isPrime() && (digitSum(n) == primeFactorsSum());
+        return !isPrime() && (digitSum(input) == primeFactorsSum());
     }
 
-    private int digitSum(int n) {
+    private int digitSum(int number) {
         int sum = 0;
-        while (n > 0) {
-            sum += n % 10;
-            n /= 10;
+        while (number > 0) {
+            sum += number % 10;
+            number /= 10;
         }
         return sum;
     }
 
     private boolean isPrime() {
-        if (n == 0 || n == 1) return false;
-        if (n == 2) return true;
-        if (n % 2 == 0) return false;
-        for (int i = 3, sqrt = (int) Math.sqrt(n); i < sqrt; i+=2) {
-            if (n % i == 0)
+        if (input == 0 || input == 1) return false;
+        if (input == 2) return true;
+        if (input % 2 == 0) return false;
+        for (int i = 3, sqrt = (int) Math.sqrt(input); i < sqrt; i+=2) {
+            if (input % i == 0)
                 return false;
         }
         return true;
@@ -32,20 +32,20 @@ class SmithNumber {
 
     private int primeFactorsSum() {
         int sum = 0;
-        while (n % 2 == 0) {
+        while (input % 2 == 0) {
             sum += 2;
-            n /= 2;
+            input /= 2;
         }
-        for (int divisor = 3, sqrt = (int) Math.sqrt(n); divisor < sqrt; divisor+=2) {
+        for (int divisor = 3, sqrt = (int) Math.sqrt(input); divisor < sqrt; divisor+=2) {
             if (isPrime())break;
-            while (n % divisor == 0) {
+            while (input % divisor == 0) {
                 sum += digitSum(divisor);
-                n /= divisor;
+                input /= divisor;
             }
         }
 
-        if (n > 0 && isPrime())
-            sum = sum + digitSum(n);
+        if (input > 0 && isPrime())
+            sum = sum + digitSum(input);
         return sum;
     }
 }
