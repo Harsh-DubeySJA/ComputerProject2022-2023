@@ -11,9 +11,9 @@ public class Question15 {
         sc.close();
     }
 
-    public static float seriesSum(int n) {
-        int fact = 1;
-        float sum = 0;
+    public static double seriesSum(int n) {
+        double fact = 1;
+        double sum = 0;
         for (int i = 1; i <= n; i++) {
             fact *= i;
             sum += 1.0f / fact;
