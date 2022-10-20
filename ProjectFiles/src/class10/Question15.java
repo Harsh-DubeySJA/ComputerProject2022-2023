@@ -16,7 +16,7 @@ public class Question15 {
         double sum = 0;
         for (int i = 1; i <= n; i++) {
             fact *= i;
-            sum += 1.0f / fact;
+            sum += 1.0d / fact;
         }
         return sum;
     }
